@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: dp_development
+  username: agustin
+  password: root
+  pool: 5
+
+test:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: dp_test
+  username: agustin
+  password: root
+  pool: 5
+
+production:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: dp_production
+  username: agustin
+  password: root
+  pool: 5
