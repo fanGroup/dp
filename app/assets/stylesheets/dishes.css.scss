@@ -1,0 +1,18 @@
+@import "bootstrap";
+
+#dishes{
+  
+  .slide-nav{
+    @include make-row();
+    @include make-lg-column(4);
+    @extend .col-lg-2;
+  }
+
+  .title { 
+    font-size: 30pt;
+    margin: 20px; 
+  }
+
+  .form-container { @extend .container; width: 98% }
+
+}

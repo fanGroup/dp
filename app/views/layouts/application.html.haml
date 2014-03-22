@@ -6,5 +6,5 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = render 'layouts/header'
+    = render 'layouts/header' if current_user
     = yield

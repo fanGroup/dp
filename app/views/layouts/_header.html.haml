@@ -12,25 +12,22 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.active
-          = link_to t('.dishes'), root_url
+          %a{href: "#{dishes_path}"}
+            = t('.dishes')
         %li
-          = link_to t('.customers'), root_url
+          %a{href: "#"}
+            = t('.customers')
         %li
-          = link_to t('.suppliers'), root_url  
+          %a{href: "#"} 
+            = t('.suppliers')
       %ul.nav.navbar-nav.navbar-right
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            = t('.options')
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: "#"} Action
-            %li
-              %a{href: "#"} Another action
-            %li
-              %a{href: "#"} Something else here
-            %li.divider
-            %li
-              %a{href: "#"} Separated link
+        - if user_signed_in?
+          %li
+            %a{ :href => "#" } #{current_user.email}
+        %li 
+          %a{href: "#{destroy_user_session_path}",
+                   "data-confirm" => t('.confirm'),
+                   "data-method" => "delete" }
+            = t('.exit')
     / /.navbar-collapse
   / /.container-fluid
