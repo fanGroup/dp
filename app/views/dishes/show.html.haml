@@ -1,0 +1,25 @@
+#dishes
+  .form-container
+    .title
+      = @dish.name
+    .col-sm-2
+      .slide-nav
+        %ul#sidebar.nav.nav-stacked
+          %li
+            %a#new-dish.dishes-new
+              %i.icon-plus-sign.icon-2x
+              = t('.new')
+          %li
+            %a.dishes-edit
+              %i.icon-edit.icon-2x
+              = t('.edit')
+    .col-sm-3
+      .input
+        = label_tag t('.name')
+        = label_tag @dish.name, nil, class: "pretty-input"
+      .input
+        = label_tag t('.description')
+        = label_tag  @dish.description ,nil , class: "pretty-input"
+      .input
+        = label_tag t('.price')
+        = label_tag  @dish.price ,nil , class: "pretty-input"

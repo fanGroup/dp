@@ -4,15 +4,74 @@
   
   .slide-nav{
     @include make-row();
-    @include make-lg-column(4);
-    @extend .col-lg-2;
+    @extend .col-sm-2;
   }
 
-  .title { 
+  .title {
+    text-align: center; 
     font-size: 30pt;
     margin: 20px; 
   }
 
   .form-container { @extend .container; width: 98% }
+
+  .dishes-new, .dishes-edit {
+    @extend .btn, .btn-xs, .btn-primary;
+    width: 150px;
+  }
+
+  .pretty-input {
+    @extend .form-control
+  }
+
+  .modal-body { @extend .form-horizontal }
+  .modal-body > .input {
+    @extend .form-group;
+    label:first-child { @extend .col-lg-4, .control-label }
+    label:nth-of-type(2) { @extend .col-lg-4, .control-label }
+    input, select { @extend .col-lg-6 }
+  }
+  .modal-body .input {
+    @include make-row();
+    @extend .form-horizontal;
+    .input {
+      @extend .form-group;
+      label {
+        @extend .col-lg-3, .control-label;
+      }
+      input {
+        @extend .col-lg-6;
+      }
+      select {
+        @extend .col-lg-6;
+      }
+    }
+
+    .input-group-addon {
+      font-size: 19px;
+    }
+  }
+  .modal-submit { @extend .btn, .btn-primary }
+
+  .new-dish, .show-dish {
+    @include make-row();
+    @extend .form-horizontal;
+    .input {
+      @extend .form-group;
+      label {
+        @extend .col-lg-3, .control-label;
+      }
+      input {
+        @extend .col-lg-4;
+      }
+      select {
+        @extend .col-lg-4;
+      }
+    }
+
+    .input-group-addon {
+      font-size: 19px;
+    }
+  }
 
 }

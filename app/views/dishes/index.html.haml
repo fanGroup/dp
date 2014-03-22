@@ -1,18 +1,9 @@
 #dishes
   .form-container
     .title
-      Dishes
-    .slide-nav
-      %ul#sidebar.nav.nav-stacked.affix
-        %li
-          %a{href: "#"} The Next Web
-        %li
-          %a{href: "#"} Mashable
-        %li
-          %a{href: "#"} TechCrunch
-        %li
-          %a{href: "#"} GitHub
-        %li
-          %a{href: "#"} In1
-        %li
-          %a{href: "#"} TechMeMe
+      = t('.dishes')
+    .col-sm-2
+      = render 'slide_menu'  
+    .col-sm-9
+      = render 'dishes_data_table'
+  #new-dish-modal.modal.fade

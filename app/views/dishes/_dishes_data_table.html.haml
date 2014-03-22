@@ -1,0 +1,7 @@
+%table#dishes-table.display{"data-source" => dishes_url(format: "json")}
+  %thead
+    %tr
+      %th= t('.name')
+      %th= t('.description')
+      %th= t('.price')
+  %tbody

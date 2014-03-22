@@ -1,4 +1,21 @@
 es:
+  dishes:
+    dishes_data_table:
+      name: Nombre
+      description: Descripción
+      price: Precio
+    show:
+      name: Nombre
+      description: Descripción
+      price: Precio
+    index:
+      dishes: Platos
+    slide_menu:
+      new: Nuevo
+      edit: Editar 
+    new_dish_modal:
+      new_dish: Nuevo Plato  
+      save: Guardar
   devise:
     sessions:
       admin_user:
@@ -20,6 +37,10 @@ es:
       user: Usuario
       admin_user: Administrador  
     attributes:
+      dish:
+        name: Nombre
+        description: Descripción
+        price: Precio
       user:
         email: Email
         created_at: Creado
