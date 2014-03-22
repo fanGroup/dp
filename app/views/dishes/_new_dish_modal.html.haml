@@ -1,0 +1,19 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      %button.close{"data-dismiss" => "modal", type: "button"} ×
+      %h3= t('.new_dish')
+    = form_for(Dish.new) do |f|
+      .modal-body
+        .input
+          = f.label :name
+          = f.text_field :name, class: "pretty-input"
+        .input
+          = f.label :description
+          = f.text_field :description, class: "pretty-input"
+        .input
+          = f.label :price
+          = f.text_field :price, class: "pretty-input"  
+      .modal-footer
+        = f.submit t('.save'), class: 'modal-submit'
+

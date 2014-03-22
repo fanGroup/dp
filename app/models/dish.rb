@@ -1,3 +1,9 @@
 class Dish < ActiveRecord::Base
-  attr_accessible :description, :price
+  
+  # == Accesors
+  attr_accessible :description, :price, :name
+
+  # == Validations
+  validates_presence_of :name, :price
+
 end
