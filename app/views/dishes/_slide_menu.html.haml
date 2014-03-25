@@ -1,10 +1,16 @@
 .slide-nav
-  %ul#sidebar.nav.nav-stacked
-    %li
-      %a#new-dish.dishes-new
-        %i.icon-plus-sign.icon-2x
-        = t('.new')
-    %li
-      %a.dishes-edit
-        %i.icon-edit.icon-2x
-        = t('.edit')
+  %ul#sidebar.nav.nqav-stacked
+    -if show_page?(@dish) 
+      %li
+        %a#edit-dish.dishes-edit
+          %i.icon-edit.icon-2x
+          = t('.edit')
+    - else      
+      %li
+        %a#new-dish.dishes-new
+          %i.icon-plus-sign.icon-2x
+          = t('.new')   
+      %li
+        %a#new-category.new-category
+          %i.icon-plus-sign.icon-2x
+          = t('.new_category')    

@@ -29,13 +29,14 @@ class DishesController < ApplicationController
   
   def edit
     @dish = Dish.find(params[:id])
+    if request.xhr?
+      render partial: 'edit_dish_modal'
+    end 
   end
 
   def update
     @dish = Dish.find(params[:id])
-    if @dish.update_attributes(params[:dish])
-      flash[:success] = t('flash.dish', message: t('flash.updated'))
-    end
+    @dish.update_attributes(params[:dish])
     respond_with @dish
   end
 

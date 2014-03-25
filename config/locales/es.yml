@@ -1,4 +1,9 @@
 es:
+  categories:
+    new_category_modal:
+      new_category: Nueva Categoría
+      save: Guardar
+      name: Nombre
   dishes:
     dishes_data_table:
       name: Nombre
@@ -7,15 +12,20 @@ es:
     show:
       name: Nombre
       description: Descripción
+      category: Categoría
       price: Precio
     index:
       dishes: Platos
     slide_menu:
+      new_category: Categ       
       new: Nuevo
       edit: Editar 
     new_dish_modal:
       new_dish: Nuevo Plato  
       save: Guardar
+    edit_dish_modal:
+      edit_dish: Editar Plato  
+      save: Guardar  
   devise:
     sessions:
       admin_user:
@@ -37,7 +47,10 @@ es:
       user: Usuario
       admin_user: Administrador  
     attributes:
+      category:
+        name: Nombre
       dish:
+        category: Categoría
         name: Nombre
         description: Descripción
         price: Precio
