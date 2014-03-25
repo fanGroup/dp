@@ -13,11 +13,28 @@
     margin: 20px; 
   }
 
-  .form-container { @extend .container; width: 98% }
+  .form-container { 
+    @extend .container; 
+    width: 98%; 
+    .slide-menu {
+      @extend .col-sm-2;
+    }
+    .show-info{
+      @extend .col-sm-4;
+    }
+    .image-container {
+      @extend .col-sm-6;
+    }
+    .data-table {
+      @extend .col-sm-9
+    }
+  }
 
-  .dishes-new, .dishes-edit {
+
+  .dishes-new, .dishes-edit, .new-category {
     @extend .btn, .btn-xs, .btn-primary;
     width: 150px;
+    margin: 3px;
   }
 
   .pretty-input {

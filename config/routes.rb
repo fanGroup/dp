@@ -4,6 +4,7 @@ Dp::Application.routes.draw do
     root to: 'devise/sessions#new'
   end
 
+  resources :categories
   resources :dishes
 
   get '/landing_page', to: 'landing#index'

@@ -7,25 +7,25 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand Dulce Pimienta
+      %a.navbar-brand{ href: "#{root_path}" } Dulce Pimienta
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.active
-          %a{href: "#{dishes_path}"}
+          %a{ href: "#{dishes_path}" }
             = t('.dishes')
         %li
-          %a{href: "#"}
+          %a{ href: "#" }
             = t('.customers')
         %li
-          %a{href: "#"} 
+          %a{ href: "#" } 
             = t('.suppliers')
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
           %li
-            %a{ :href => "#" } #{current_user.email}
+            %a{ href: "#" } #{current_user.email}
         %li 
-          %a{href: "#{destroy_user_session_path}",
+          %a{ href: "#{destroy_user_session_path}",
                    "data-confirm" => t('.confirm'),
                    "data-method" => "delete" }
             = t('.exit')
