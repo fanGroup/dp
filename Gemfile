@@ -52,3 +52,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara-select2'
 end
+
+group :production do
+  gem 'rails_12factor'
+end  
