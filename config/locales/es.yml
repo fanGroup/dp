@@ -1,4 +1,13 @@
 es:
+  sales:
+    sales_data_table:
+      id: Id
+      date: Fecha
+      amount: Monto
+    index:
+      sales: Ventas  
+    slide_menu:
+      new: Nueva
   categories:
     new_category_modal:
       new_category: Nueva Categoría
@@ -37,6 +46,7 @@ es:
         password: Contraseña
   layouts:
     header:
+      sales: Ventas
       dishes: Platos
       customers: Clientes
       suppliers: Proveedores

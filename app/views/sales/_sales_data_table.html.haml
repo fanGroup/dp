@@ -1,0 +1,7 @@
+%table#sales-table.display{"data-source" => sales_url(format: "json")}
+  %thead
+    %tr
+      %th= t('.id')
+      %th= t('.date')
+      %th= t('.amount')
+  %tbody

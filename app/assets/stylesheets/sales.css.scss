@@ -1,0 +1,94 @@
+@import "bootstrap";
+
+#sales {
+  
+  .slide-nav{
+    @include make-row();
+    @extend .col-sm-2;
+  }
+
+  .title {
+    text-align: center; 
+    font-size: 30pt;
+    margin: 20px; 
+  }
+
+  .form-container { 
+    @extend .container; 
+    width: 98%; 
+    .slide-menu {
+      @extend .col-sm-2;
+    }
+    .show-info{
+      @extend .col-sm-4;
+    }
+    .image-container {
+      @extend .col-sm-6;
+    }
+    .data-table {
+      @extend .col-sm-9
+    }
+  }
+
+
+  .sales-new, .sales-edit, .new-category {
+    @extend .btn, .btn-xs, .btn-primary;
+    width: 150px;
+    margin: 3px;
+  }
+
+  .pretty-input {
+    @extend .form-control
+  }
+
+  .modal-body { @extend .form-horizontal }
+  .modal-body > .input {
+    @extend .form-group;
+    label:first-child { @extend .col-lg-4, .control-label }
+    label:nth-of-type(2) { @extend .col-lg-4, .control-label }
+    input, select { @extend .col-lg-6 }
+  }
+  .modal-body .input {
+    @include make-row();
+    @extend .form-horizontal;
+    .input {
+      @extend .form-group;
+      label {
+        @extend .col-lg-3, .control-label;
+      }
+      input {
+        @extend .col-lg-6;
+      }
+      select {
+        @extend .col-lg-6;
+      }
+    }
+
+    .input-group-addon {
+      font-size: 19px;
+    }
+  }
+  .modal-submit { @extend .btn, .btn-primary }
+
+  .new-dish, .show-dish {
+    @include make-row();
+    @extend .form-horizontal;
+    .input {
+      @extend .form-group;
+      label {
+        @extend .col-lg-3, .control-label;
+      }
+      input {
+        @extend .col-lg-4;
+      }
+      select {
+        @extend .col-lg-4;
+      }
+    }
+
+    .input-group-addon {
+      font-size: 19px;
+    }
+  }
+
+}
