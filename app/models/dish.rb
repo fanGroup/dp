@@ -11,6 +11,7 @@ class Dish < ActiveRecord::Base
 
   # == Associations
   has_one :category
+  has_many :sales
 
   private
 

@@ -11,9 +11,12 @@
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li.active
+        %li
           %a{ href: "#{dishes_path}" }
             = t('.dishes')
+        %li
+          %a{ href: "#{sales_path}" }
+            = t('.sales')    
         %li
           %a{ href: "#" }
             = t('.customers')

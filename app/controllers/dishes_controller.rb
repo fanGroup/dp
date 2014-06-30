@@ -6,7 +6,16 @@ class DishesController < ApplicationController
   def index
     respond_to do |format|
       format.html
-      format.json { render json: DishesDatatable.new(view_context) }
+      format.json do
+        if params[:q].present?
+          data = Dish.where("name ILIKE :search or
+                                  description ILIKE :search",
+                                  search: "%#{params[:q]}%")  
+        else
+          data = DishesDatatable.new(view_context)
+        end
+        render json: data
+      end    
     end
   end  
 

@@ -1,0 +1,12 @@
+.slide-nav
+  %ul#sidebar.nav.nqav-stacked
+    -if show_page?(@sale) 
+      %li
+        %a#edit-sale.sales-edit
+          %i.icon-edit.icon-2x
+          = t('.anull')
+    - else      
+      %li
+        %a#new-sale.sales-new
+          %i.icon-plus-sign.icon-2x
+          = t('.new')   

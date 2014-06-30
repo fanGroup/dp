@@ -1,0 +1,16 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      %button.close{"data-dismiss" => "modal", type: "button"} ×
+      %h3= t('.new_sale')
+    = form_for(Sale.new) do |f|
+      .modal-body
+        .input
+          = f.label :date
+          = label_tag print_date(Time.now(), :date_now), nil, id: "date_label", class: "pretty-input"
+        .input
+          = f.label :dishes_token
+          = f.text_field :dishes_token, class: "pretty-input"
+      .modal-footer
+        = f.submit t('.save'), class: 'modal-submit'
+
